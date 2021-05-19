@@ -39,5 +39,5 @@ def metaalarm(times, lo, hi):
         alarm(lo, hi)
         times -= 1
 
-time.sleep(float(input("stint length: ")) * 60)
+time.sleep(float(input("minutes (float): ")) * 60)
 metaalarm(15, 1, 1)
