@@ -1,7 +1,6 @@
 import time, numpy as np, simpleaudio as sa
 
 
-
 def beep(frequency, seconds):
     fs = 44100  # 44100 samples per second
 
@@ -40,8 +39,5 @@ def metaalarm(times, lo, hi):
         alarm(lo, hi)
         times -= 1
 
-# 25 min converted to seconds for time.sleep arg
-stint = 25 * 60
-
-time.sleep(stint)
-metaalarm(10, 1, 1)
+time.sleep(float(input("stint length: ")) * 60)
+metaalarm(15, 1, 1)
