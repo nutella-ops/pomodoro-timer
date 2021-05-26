@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import time, numpy as np, simpleaudio as sa
 
 
