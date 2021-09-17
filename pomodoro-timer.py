@@ -41,4 +41,4 @@ def metaalarm(times, lo, hi):
         times -= 1
 while(1):
     time.sleep(float(input("minutes (float): ")) * 60)
-    metaalarm(15, 1, 1)
+    metaalarm(3, 1, 1)
