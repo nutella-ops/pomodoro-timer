@@ -7,6 +7,8 @@ def day():
 def clk():
     print(time.ctime()[11:19])
 
+file = time.ctime()[4:19]
+
 n = 0
 day()
 print("-----------")
@@ -18,3 +20,4 @@ while(1):
     for y in userInput:
         os.system("ffplay -nodisp -autoexit ~/work_a*/git*/pomo*/res/"+y+"-1.wav 1>/dev/null 2>/dev/null")
     n += 1
+    os.system("echo " + time.ctime()[4:19] + " >> /tmp/" + "'" + file + "'" + ".txt")
