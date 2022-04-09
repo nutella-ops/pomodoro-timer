@@ -15,7 +15,6 @@ while(1):
     logEntry = startTime + " -- " + stopTime
     print(day + " " + logEntry)
 
-    for y in userInput:
-        os.system("ffplay -nodisp -autoexit ~/work_a*/git*/pomo*/res/"+y+"-1.wav 1>/dev/null 2>/dev/null")
+    os.system("ffplay -nodisp -autoexit $(find ~ -name 'g.wav' 2>/dev/null) 2>/dev/null")
     n += 1
     os.system("echo " + logEntry + " >> /tmp/" + "'" + day + "'" + ".txt")
