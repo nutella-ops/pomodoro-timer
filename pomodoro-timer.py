@@ -26,11 +26,10 @@ while(1):
     startTime = sysTime[3][0:5]
     time.sleep(minutes * 60)
     stopTime = sysTime[3][0:5]
-
+    os.system("ffplay -nodisp -autoexit $(find ~ -name 'g.wav' 2>/dev/null) 2>/dev/null")
     logPom = startTime + ", " + stopTime
     print(logHeader + ", " + logPom)
     dayCheck()
-    os.system("ffplay -nodisp -autoexit $(find ~ -name 'g.wav' 2>/dev/null) 2>/dev/null")
     pom += 1
 # except KeyboardInterrupt:
 #    response = input("Save your data?: ") 
