@@ -18,6 +18,7 @@ def dayCheck():
         os.system("echo " + logPom + " >> /tmp/" + fileName)
 
 pom = 0
+# try:
 while(1):
     userInput = input("[" + str(pom) + "] minutes: ")
     minutes = float(userInput)
@@ -28,6 +29,11 @@ while(1):
 
     logPom = startTime + ", " + stopTime
     print(logHeader + ", " + logPom)
-
+    dayCheck()
     os.system("ffplay -nodisp -autoexit $(find ~ -name 'g.wav' 2>/dev/null) 2>/dev/null")
     pom += 1
+# except KeyboardInterrupt:
+#    response = input("Save your data?: ") 
+#     if (response.lower()[0] == y):
+#         os.system("mkdir ~/Documents/poms")
+#         os.system("mv /tmp/" + month.lower() + "*.txt ~/Documents/poms"
