@@ -33,7 +33,7 @@ def checkExisting():
 
 
 # check if the day has changed since the program was started
-def dayCheck():
+def dayCheck(initDay):
     dayNow = time.ctime().split()[2]
     logFile = open(filePath, "a")
     if (dayNow == initDay):
@@ -72,12 +72,12 @@ while(1):
 
     stopTime = time.ctime().split()[3][0:5]
     
-    # play da sound
-    playsound.playsound('res/g.wav')
-    
     # format the start and stop times with a comma and save to a variable
     logPom = startTime + ", " + stopTime
 
     # print(logHeader + ", " + logPom)
-    dayCheck()
+    dayCheck(initDay)
     pom += 1
+
+    # play da sound
+    playsound.playsound(os.environ['HOME'] + '/work_area/git-repos/pomodoro-timer/res/g.wav')
